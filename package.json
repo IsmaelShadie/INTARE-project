@@ -1,0 +1,9 @@
+{
+  "name": "intare-sports-club",
+  "version": "1.0.0",
+  "private": true,
+  "description": "INTARE website hosting layer; approved pages and embedded assets are stored in Supabase.",
+  "engines": {
+    "node": "22.x"
+  }
+}

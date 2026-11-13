@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/site.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/site.js?page=index"
+    },
+    {
+      "src": "/(index|club|subscriptions|coaching|aerobics|reviews|visit)(?:\\.html)?/?",
+      "dest": "/api/site.js?page=$1"
+    },
+    {
+      "src": "/.*",
+      "dest": "/api/site.js?page=not-found"
+    }
+  ]
+}
